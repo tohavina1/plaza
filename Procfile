@@ -1,0 +1,1 @@
+web: java -jar target/jtestmongo-1.0-SNAPSHOT.war
