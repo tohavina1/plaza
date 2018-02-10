@@ -23,6 +23,7 @@
     <% User u=new User();
     u.setPseudo("cououc heroku");
        u.setId("fdd");
+       Date d=new Date();
     %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -30,7 +31,7 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <p><%=u.getId()%></p>
+        <p><%=d.toString()%></p>
         
     </body>
 </html>
