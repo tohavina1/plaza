@@ -22,6 +22,7 @@
 <html>
     <% User u=new User();
     u.setPseudo("cououc heroku");
+       u.setId("fdd");
     %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -29,7 +30,7 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <p><%=u.getPseudo()%></p>
+        <p><%=u.getId()%></p>
         
     </body>
 </html>
