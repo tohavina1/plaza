@@ -78,8 +78,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                          <form action="../controller/loginCtrl.jsp" method="post">
 					<div class="login-form-grids">
 				
-				<h6>Login Here (pseudo = admin and pass= 123) </h6>
-					
+				<h6>Login Here  </h6>
+                                <p>(pseudo = admin and pass= 123)</p>
 					<input name="pseudo" type="text" placeholder="Pseudonym" required=" " >                  
 					<input name="pass" type="password" placeholder="Password" required=" " >
 					<div class="register-check-box">
