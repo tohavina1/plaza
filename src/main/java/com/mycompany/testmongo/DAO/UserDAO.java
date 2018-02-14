@@ -60,6 +60,7 @@ public class UserDAO {
             BasicDBObject document = new BasicDBObject();
             document.put("id", user.getId());
             document.put("pseudo", user.getPseudo());
+            document.put("password", user.getPassword());
             document.put("email", user.getEmail());
             document.put("jeton", user.getJeton());
             document.put("isadmin", user.getIsadmin());
