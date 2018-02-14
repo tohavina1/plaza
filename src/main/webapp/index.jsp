@@ -1,5 +1,3 @@
 <%
-
-    RequestDispatcher dispat = request.getRequestDispatcher("pages/index.jsp"); 
-    dispat.forward(request,response);
+     response.sendRedirect("pages/index.jsp");
 %>
