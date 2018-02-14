@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Welcome</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input [(ngModel)]="username" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button ion-button full (click)="this.doLogin()" >Log in</button>
+    <p align="center"><a (click)="openModal()">Sign up</a></p>
+  </div>
+</ion-content>
