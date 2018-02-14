@@ -24,13 +24,13 @@ public class Tools
         int j = dt.getDate();
         int m = dt.getMonth();
         int y = dt.getYear();
-        String datestring = "" + y + "-" + m + "-" + j;
+        String datestring =  y + "-" + m + "-" + j;
         System.out.println("io daty "+datestring);
         return datestring;
     }
     public Date formatStringToDate(String date)
     {
-        String s="2018-01-12";
+       // String s="2018-01-12";
         String[]listes=date.split("-");
         return new Date(Integer.parseInt(listes[0]),Integer.parseInt(listes[1]),Integer.parseInt(listes[2]));
     }

@@ -73,7 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- register -->
 	<div class="register">
 		<div class="container">
-			<h2>Welcome to PLAZA </h2>
+			<h2>Welcome to PLAZA (pseudo = admin and pass= 123)</h2>
                         <p align="center" Style="color: red;"><%=confirm%></p>
                          <form action="../controller/loginCtrl.jsp" method="post">
 					<div class="login-form-grids">
