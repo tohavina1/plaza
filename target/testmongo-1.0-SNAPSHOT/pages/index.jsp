@@ -22,6 +22,7 @@
         CategorieDAO daoc=new CategorieDAO();
         ImageDAO daoi=new ImageDAO();
         ArrayList<Film>listes=daof.getTopfilm(5);
+      
     %>
 <head>
 	<title>Plaza</title>

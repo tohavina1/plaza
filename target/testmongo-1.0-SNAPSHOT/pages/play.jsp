@@ -113,7 +113,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="agileinfo_single" style="background-color:black;">
 				<div class="row" >
 					<div class="col-md-10 col-md-offset-1" style="background-color:white;">
-						<video id="myvideo"src="<%=source%>"style=" width: 100%; height: 56%;" type="video/3gp" controls>
+						<video id="myvideo"style=" width: 100%; height: 56%;"  controls>
+                                                    <source src="http://plazachanel.000webhostapp.com/plaza/Horror/Annabelle 2.webm" type="video/webm">
 						</video>
 					</div>
         

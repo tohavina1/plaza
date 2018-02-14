@@ -65,13 +65,32 @@ public class UserDAO {
             document.put("isadmin", user.getIsadmin());
             document.put("isactif", user.getIsactif());
             document.put("remarque", user.getRemarque());
-            document.put("datedebut",tool.repairDate(user.getDatedebut())  );
-            document.put("datefin",tool.repairDate(user.getDatefin()) );
-            document.put("idabonne", user.getIdabonne());
+            document.put("datedebut",tool.formatDateToString(user.getDatedebut())  );
+            document.put("datefin",tool.formatDateToString(user.getDatefin()) );
+           
             table.insert(document);
         }
         catch(Exception ex)
         {
+            throw ex;
+        }
+    }
+    public int countUsers()throws Exception
+    {
+             try
+        {
+            User user=new User();
+            MongoConnect con=new MongoConnect(); 
+            DB data=con.getConnection();
+            DBCollection acteurs = data.getCollection("users");
+            Tools  tool =new Tools();
+            int cursors= acteurs.find().count();
+            return cursors;
+           
+        }
+        catch(Exception ex)
+        {
+             ex.printStackTrace();
             throw ex;
         }
     }

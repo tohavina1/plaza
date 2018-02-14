@@ -25,6 +25,7 @@
     String mail=request.getParameter("mail");
     String pseudo=request.getParameter("name");
     String mdp=request.getParameter("pass");
+  
     RequestDispatcher dispat = request.getRequestDispatcher("../pages/abonnement.jsp"); 
     dispat.forward(request,response);
 %>

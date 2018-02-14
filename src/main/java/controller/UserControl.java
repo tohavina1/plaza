@@ -86,6 +86,7 @@ public class UserControl {
              if(user!=0 && mdp!=0)
             {
                 stat[0]="1";
+                System.out.println("io eh "+stat[0]);
                 stat[1]=dao.findByPseudo(pseudo).getId();
             }
             if(user==0 && mdp==0)

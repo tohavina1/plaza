@@ -5,6 +5,7 @@
  */
 package controller;
 
+import com.mycompany.testmongo.DAO.UserDAO;
 import java.util.Date;
 
 /**
@@ -17,7 +18,7 @@ public class Tools
     }
     public String getHostVideo(String categorie,String nom)
     {
-        return "https://plazachanel.000webhostapp.com/plaza/"+categorie+"/"+nom;
+        return "http://plazachanel.000webhostapp.com/plaza/"+categorie+"/"+nom;
     }
     public String formatDateToString(Date dt) throws Exception {
         int j = dt.getDate();
@@ -38,7 +39,22 @@ public class Tools
         System.out.println("timer=" + timer);
         return (Float.parseFloat(timme[0].toString()) * 60) + Float.parseFloat(timme[1].toString());
     }
+   public String getPredicat(String classe)throws Exception
+   {
+       try
+       {
+              if(classe=="User")
+                {
+                    return "USR000"+new UserDAO().countUsers();
+                }        
+                return "";
+       }
+       catch(Exception ex)
+       {
+           throw ex;
+       }
     
+   }
    /* public String getIdseq(String tabseq) throws Exception {
         SQLConnection con = new SQLConnection();
         String idseq = null;
