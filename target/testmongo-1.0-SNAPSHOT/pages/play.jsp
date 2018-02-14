@@ -117,6 +117,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <source src="<%=source%>" type="video/webm">
 						</video>
 					</div>
+                                                
         
 				</div>
 				<div class="clearfix"> </div>
@@ -330,6 +331,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 	</script>
 <!-- //here ends scrolling icon -->
+<script>
+    videoplay();
+    </script>
 <script src="js/minicart.min.js"></script>
 
 
