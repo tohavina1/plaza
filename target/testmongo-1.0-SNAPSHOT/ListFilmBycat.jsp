@@ -12,7 +12,7 @@
 <%@page import="com.mongodb.QueryBuilder"%>
 <%@page import="com.mongodb.DBObject"%>
 <%@page import="com.mongodb.DBCollection"%>
-<%@page import="controller.UserControl"%>
+<%@page import="controller.*"%>
 <%@page import="com.mycompany.testmongo.DAO.*"%>
 <%@page import="com.mycompany.testmongo.*"%>
 <%@page import="com.mycompany.testmongo.*"%>
@@ -39,10 +39,11 @@
             obj.put("titre", f.getTitre());
             obj.put("description", f.getDescription());
             obj.put("image", f.getImage());
-            obj.put("datesortie", f.getDatesortie());
+            obj.put("datesortie", new Tools().formatDateToString(f.getDatesortie()));
             obj.put("prix", f.getPrix());
             obj.put("cat", f.getIdcat());
             obj.put("remarque", f.getRemarque());
+            obj.put("duration", f.getDuration());
             arr.put(obj);
             obj=new JSONObject();
         }

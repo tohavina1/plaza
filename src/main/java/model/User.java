@@ -5,13 +5,19 @@
  */
 package model;
 
+import java.util.Date;
+
 /**
- *-id
+ * -id
         -pseudo
-        -mdp
+        -password
         -email
         -jeton
+        -isadmin
+        -isactif
         -remarque
+        -datedebut
+        -datefin
  * @author TOHX
  */
 public class User {
@@ -20,12 +26,17 @@ public class User {
     private String password;
     private String email;
     private double jeton;
+    private int isadmin;
+    private int isactif;
     private String remarque;
+    private Date datedebut;
+    private Date datefin;
+    private String idabonne;
     public User()
     {
     
     }
-    public User(String pseudo, String password, String email, double jeton, String remarque) {
+    public User(String pseudo, String password, String email, double jeton, String remarque,String abonne) {
         setPseudo(pseudo);
         setPassword (password);
         setEmail (email);
@@ -33,7 +44,73 @@ public class User {
         setRemarque (remarque) ;
     }
 
-    public User(String id, String pseudo, String password, String email, double jeton, String remarque) {
+    public User(String id, String pseudo, String password, String email, double jeton, int isadmin, int isactif, String remarque, Date datedebut, Date datefin) {
+        setId(id) ;
+        setPseudo(pseudo);
+        setPassword (password);
+        setEmail (email);
+        setJeton (jeton) ;
+        setIsadmin(isadmin) ;
+        setIsactif(isactif) ;
+        setRemarque(remarque) ;
+        setDatedebut(datedebut) ;
+        setDatefin(datefin) ;
+    }
+
+    public User(String pseudo, String password, String email, double jeton, int isadmin, int isactif, String remarque, Date datedebut, Date datefin,String idabonne) {
+        setPseudo(pseudo);
+        setPassword (password);
+        setEmail (email);
+        setJeton (jeton) ;
+        setIsadmin(isadmin) ;
+        setIsactif(isactif) ;
+        setRemarque(remarque) ;
+        setDatedebut(datedebut) ;
+        setDatefin(datefin) ;
+        setIdabonne(idabonne);
+    }
+
+    public String getIdabonne() {
+        return idabonne;
+    }
+
+    public void setIdabonne(String idabonne) {
+        this.idabonne = idabonne;
+    }
+
+    public int getIsadmin() {
+        return isadmin;
+    }
+
+    public void setIsadmin(int isadmin) {
+        this.isadmin = isadmin;
+    }
+
+    public int getIsactif() {
+        return isactif;
+    }
+
+    public void setIsactif(int isactif) {
+        this.isactif = isactif;
+    }
+
+    public Date getDatedebut() {
+        return datedebut;
+    }
+
+    public void setDatedebut(Date datedebut) {
+        this.datedebut = datedebut;
+    }
+
+    public Date getDatefin() {
+        return datefin;
+    }
+
+    public void setDatefin(Date datefin) {
+        this.datefin = datefin;
+    }
+
+    public User(String id, String pseudo, String password, String email, double jeton, String remarque,String abonne) {
         setId(id) ;
         setPseudo(pseudo);
         setPassword (password);
@@ -42,6 +119,7 @@ public class User {
         setRemarque (remarque) ;
     }
 
+    
     public String getId() {
         return id;
     }

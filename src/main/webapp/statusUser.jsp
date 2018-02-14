@@ -29,10 +29,11 @@
     DBCursor cursor = null;
     String pseudo = request.getParameter("p");
     String mdp = request.getParameter("mdp");
+
     UserDAO dao=new UserDAO();
-    UserControl ctrl=new UserControl();
+    UserControl control=new UserControl();
     try {  
-            String status[]= ctrl.statusUser(pseudo, mdp);
+            String status[]= control.statusUser(pseudo,mdp);
             obj.put("status", status[0]);
             obj.put("id", status[1]);
             arr.put(obj);

@@ -22,11 +22,24 @@ public class Film {
    private double prix;
    private String idcat;
    private String remarque;
+   private String duration;
 
+ 
    public Film()
    {
        
    }
+      public Film(String id, String titre, String description, String image, Date datesortie, double prix, String idcat, String remarque, String duration) {
+        setId(id);
+        setTitre(titre);
+        setDescription(description);
+        setImage (image);
+        setDatesortie (datesortie) ;
+        setPrix (prix) ;
+        setIdcat (idcat) ;
+        setRemarque (remarque) ;
+        setDuration(duration);
+    }
     public Film(String id, String titre, String description, String image, Date datesortie, double prix, String idcat, String remarque) {
         setId(id);
         setTitre(titre);
@@ -39,7 +52,7 @@ public class Film {
     }
 
     public Film(String titre, String description, String image, Date datesortie, double prix, String idcat, String remarque) {
-      setTitre(titre);
+        setTitre(titre);
         setDescription(description);
         setImage (image);
         setDatesortie (datesortie) ;
@@ -109,6 +122,13 @@ public class Film {
 
     public void setRemarque(String remarque) {
         this.remarque = remarque;
+    }
+      public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
    
 }

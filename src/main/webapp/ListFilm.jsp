@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ListFilm
-    Created on : Feb 9, 2018, 1:43:01 PM
+    Document   : ListFilmBycat
+    Created on : Feb 9, 2018, 3:17:15 PM
     Author     : TOHX
 --%>
 <%@page import="java.sql.*"%>
@@ -25,13 +25,14 @@
     JSONObject obj = new JSONObject();
     JSONArray arr = new JSONArray();
     MongoConnect mon = new MongoConnect();
+    String categorie=request.getParameter("idcat");
     DBCursor cursor = null;
 
     try {  
              
         // find()
          FilmDAO daof=new FilmDAO();
-         ArrayList<Film> lis=daof.listFilm();
+         ArrayList<Film> lis=daof.findByIdCat(categorie);
         for(Film f : lis)
         {
             obj.put("id", f.getId());
@@ -42,8 +43,9 @@
             obj.put("prix", f.getPrix());
             obj.put("cat", f.getIdcat());
             obj.put("remarque", f.getRemarque());
+            obj.put("duration", f.getDuration());
             arr.put(obj);
-            obj=new JSONObject();
+           // obj=new JSONObject();
         }
          out.println(arr);
          response.setHeader("Access-Control-Allow-Origin", "*");

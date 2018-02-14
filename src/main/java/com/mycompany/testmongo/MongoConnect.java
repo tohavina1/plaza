@@ -14,8 +14,8 @@ import com.mongodb.MongoClientURI;
 public class MongoConnect {
      private DB db;
     public DB getConnection() throws Exception {
-       MongoClient mongoClient = new MongoClient("localhost", 27017);
-     // MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://root:root@ds229918.mlab.com:29918/streaming"));
+      //MongoClient mongoClient = new MongoClient("localhost", 27017);
+        MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://root:root@ds229918.mlab.com:29918/streaming"));
         return db = mongoClient.getDB("streaming");
         //return db = mongo.getDB("clouddb");
     }

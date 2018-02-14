@@ -51,5 +51,32 @@ public class CategorieDAO {
             
        
     }
+    public Categorie findById(String id)throws Exception
+    {
+        Categorie cat=new Categorie();
+        MongoConnect con=new MongoConnect(); 
+        try
+       {
+            DB data=con.getConnection();
+            DBCollection categorie = data.getCollection("categorie");
+            BasicDBObject query = new BasicDBObject ("id", id);
+             DBCollection film = data.getCollection("film");
+            DBCursor cursors= categorie.find(query);
+            while (cursors.hasNext ())
+            {
+                DBObject objet=cursors.next ();
+                BasicDBObject curs=new BasicDBObject("idcat",objet.get("id").toString());
+                int nombre=(int)film.count(curs);
+                cat=new Categorie(objet.get("id").toString(),objet.get("type").toString(),nombre);   
+            }
+            cursors.close ();
+        return cat;
+       }
+       catch(Exception ex)
+       {
+           throw ex;
+       }
+       
+    }
     
 }
