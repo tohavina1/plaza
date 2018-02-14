@@ -32,7 +32,7 @@ public class Tools
     {
        // String s="2018-01-12";
         String[]listes=date.split("-");
-        return new Date(Integer.parseInt(listes[0].trim()),Integer.parseInt(listes[1]),Integer.parseInt(listes[2]));
+        return new Date(Integer.parseInt(listes[0]),Integer.parseInt(listes[1]),Integer.parseInt(listes[2]));
     }
     public float timerToSecond(String timer) throws Exception {
         String[] timme = timer.split(":");
