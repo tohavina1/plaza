@@ -24,7 +24,7 @@ public class Tools
         int j = dt.getDate();
         int m = dt.getMonth();
         int y = dt.getYear();
-        String datestring = " " + y + "-" + m + "-" + j;
+        String datestring = "" + y + "-" + m + "-" + j;
         System.out.println("io daty "+datestring);
         return datestring;
     }
