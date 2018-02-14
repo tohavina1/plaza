@@ -25,12 +25,12 @@ public class Main {
         System.out.println("ON A "+test);*/
         
         // vérifie si le mdp existe pour un pseudo
-       int test1=control.passwordExist("admin", "123");
-           System.out.println("ON A "+test1);
+      /* int test1=control.passwordExist("rakoto", "gg");
+           System.out.println("ON A "+test1);*/
            
           // status user connecte
-         /* String test2[]=control.statusUser("admin","123");
-           System.out.println("status "+test2[0]+test2[1]); */
+          String test2[]=control.statusUser("rakoto","gg");
+           System.out.println("status "+test2[0]+test2[1]); 
         //  JSONObject obj = new JSONObject();
         
         // FilmDAO 
@@ -72,7 +72,7 @@ public class Main {
         FilmDAO dd=new FilmDAO();
         Video vv=dd.getByIdfilm("FLM0001");
         System.err.println(vv.getNom());*/
-     String s="2018-01-12";
+  /*   String s="2018-01-12";
      String[]ss=s.split("-");
      System.out.println(ss[0]);
       System.out.println(ss[1]);
@@ -87,7 +87,7 @@ public class Main {
     Date ds=c.getTime();// number of days to add
     dt = sdf.format(ds); 
     
-    System.out.println(ds.getYear());
+    System.out.println(ds.getYear());*/
     }
     
 }
