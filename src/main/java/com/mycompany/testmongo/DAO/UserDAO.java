@@ -63,8 +63,8 @@ public class UserDAO {
             document.put("password", user.getPassword());
             document.put("email", user.getEmail());
             document.put("jeton", user.getJeton());
-            document.put("isadmin", user.getIsadmin());
-            document.put("isactif", user.getIsactif());
+            document.put("isadmin",""+user.getIsadmin());
+            document.put("actif", ""+user.getIsactif());
             document.put("remarque", user.getRemarque());
             document.put("datedebut",tool.formatDateToString(user.getDatedebut())  );
             document.put("datefin",tool.formatDateToString(user.getDatefin()) );
