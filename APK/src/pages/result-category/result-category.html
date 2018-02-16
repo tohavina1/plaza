@@ -17,7 +17,7 @@
   <ion-list>
     <button ion-item *ngFor="let res of catresult" (click)="selectCategory($event, res.id)">
       <div>
-        <ion-img style="width: 108px; height: 90px;" src="../../assets/imgs/{{res.image}}.jpg"></ion-img>
+        <img width="108" height="92" src="{{'assets/imgs/'+res.image+'.jpg'}}">
         <p class="title">{{res.titre}}</p>
       </div>
     </button>

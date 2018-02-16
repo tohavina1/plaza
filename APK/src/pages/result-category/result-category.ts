@@ -27,10 +27,6 @@ export class ResultCategoryPage {
     });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ResultCategoryPage');
-  }
-
   selectCategory(event, res) : void{
     this.navCtrl.push(ItemDetailsPage, {
       res : res
