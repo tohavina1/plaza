@@ -25,9 +25,10 @@
     String pseudo=request.getParameter("pseudo");
     String mdp=request.getParameter("pass");
     UserControl ctrl=new UserControl();
+    UserDAO dao=new UserDAO();
     String[]stat=ctrl.statusUser(pseudo, mdp);
     String info="";
- out.println(stat[0]);
+    out.println(stat[0]);
      if(stat[0]=="2")
     {
          info="wrong login";
@@ -39,8 +40,11 @@
         response.sendRedirect("../pages/login.jsp?confirm="+info);
     }
     else
-    {
-       response.sendRedirect("../pages/index.jsp?");
+    {       
+        HttpSession mysession=request.getSession();
+        User current=dao.findByPseudo(pseudo);
+        session.setAttribute("current", current);
+        response.sendRedirect("../pages/index.jsp?");
     }
 
 %>

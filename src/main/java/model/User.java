@@ -7,19 +7,7 @@ package model;
 
 import java.util.Date;
 
-/**
- * -id
-        -pseudo
-        -password
-        -email
-        -jeton
-        -isadmin
-        -isactif
-        -remarque
-        -datedebut
-        -datefin
- * @author TOHX
- */
+
 public class User {
     private String id;
     private String pseudo;

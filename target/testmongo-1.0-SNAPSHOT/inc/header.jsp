@@ -7,6 +7,7 @@
 				<ul>
 					<li><a href="../pages/connexion.jsp">Login</a></li>
                                         <li><a href="../pages/connexion.jsp">Create account</a></li>
+                                        <li><a href="../controller/logout.jsp">Log out</a></li>
 					<li><a href="#">Help</a></li>
 				</ul>
 			</div>
